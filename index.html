@@ -22,13 +22,49 @@
       padding: 20px 30px;
       margin: 10px;
       text-align: center;
-      width: 300px;
+      width: 320px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: relative;
     }
     .link-card a {
       text-decoration: none;
       color: #0077cc;
       font-size: 18px;
+    }
+
+    .info-icon {
+      display: inline-block;
+      position: relative;
+      margin-left: 8px;
+      cursor: pointer;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      width: max-content;
+      max-width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s ease;
+      font-size: 13px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .info-icon:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
     }
   </style>
 </head>
@@ -37,37 +73,32 @@
   <h1>📊 ALKT Analytics Hub</h1>
 
   <div class="link-card">
-    <a href="https://cortex.tools.mgmt.alkami.net/" target="_blank"> 📈  Service Health - Cortex</a>
-   <span class="info-icon">ⓘ
-     <span class="tooltip">Monitors engineering operational metrics</span>
-   </span>
-    
-  </div>
-
-<div class="link-card">
-    <a href="https://alkami.allstacks.com" target="_blank"> 🧠 Developer Insights - Allstacks</a>
-  <span class="info-icon">ⓘ
-      <span class="tooltip">Monitors bottlenecks in SDLC</span>
-  </span>
-  </div>
-
-<div class="link-card">
-    <a href="https://docs.google.com/spreadsheets/d/1g2crdFbOLa0Xh6lzRvdaV_W7dzVwTud613L4UQbMz6M/edit?gid=0#gid=0" target="_blank"> ⏱️ MTTR Metrics</a>
-  <span class="info-icon">ⓘ
-      <span class="tooltip">Monitors Sev1 mean resolution time</span>
-   </span>
-  
+    <a href="https://cortex.tools.mgmt.alkami.net/" target="_blank">📈 Service Health - Cortex</a>
+    <span class="info-icon">ⓘ
+      <span class="tooltip">Monitors engineering operational metrics</span>
+    </span>
   </div>
 
   <div class="link-card">
-    <a href="https://docs.google.com/spreadsheets/d/1MWvq6yTNP_rgRw26opoKEh4Rk0YF4D1lGn_a7jwFPwM/edit?gid=410406598#gid=410406598" target="_blank"> ❗ CFR Metrics</a>
-  <span class="info-icon">ⓘ
-      <span class="tooltip">Monitors Ux free of crashes</span>
-   </span>
-    
+    <a href="https://alkami.allstacks.com" target="_blank">🧠 Developer Insights - Allstacks</a>
+    <span class="info-icon">ⓘ
+      <span class="tooltip">Monitors bottlenecks in the SDLC</span>
+    </span>
   </div>
 
-  
+  <div class="link-card">
+    <a href="https://docs.google.com/spreadsheets/d/1g2crdFbOLa0Xh6lzRvdaV_W7dzVwTud613L4UQbMz6M/edit?gid=0#gid=0" target="_blank">⏱️ MTTR Metrics</a>
+    <span class="info-icon">ⓘ
+      <span class="tooltip">Tracks Sev1 mean time to resolution</span>
+    </span>
+  </div>
+
+  <div class="link-card">
+    <a href="https://docs.google.com/spreadsheets/d/1MWvq6yTNP_rgRw26opoKEh4Rk0YF4D1lGn_a7jwFPwM/edit?gid=410406598#gid=410406598" target="_blank">❗ CFR Metrics</a>
+    <span class="info-icon">ⓘ
+      <span class="tooltip">Crash Free Rate: user experience stability</span>
+    </span>
+  </div>
 
 </body>
 </html>
