@@ -1,0 +1,12 @@
+image: node:latest  # or use another image like alpine, ruby, etc. for your build needs
+
+pages:
+  script:
+    - echo "✅ Building static site"
+    - mkdir -p public
+    - cp -r * public/ || true  # copies files to public if not already there
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # or master, depending on your default branch
